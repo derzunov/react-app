@@ -1,18 +1,20 @@
-import React from "react";
-import { Link } from "react-router";
+import React from 'react'
+import { Link } from 'react-router'
 
 export default class CatPreview extends React.Component {
     render() {
         return (
-            <div className="cat-preview">
+            <div className='cat-preview'>
                 <h3>
-                    <Link to={ "/cat/" + this.props.id }>
+                    <Link to={ '/cat/' + this.props.id }>
                         { this.props.name }
-                        <small>{ this.props.breed }</small>
                     </Link>
+                    <small> { this.props.breed }</small>
                 </h3>
-                <img className="img-responsive" src={"img/" + this.props.image} />
+                <Link to={ '/cat/' + this.props.id }>
+                    <img className='img-responsive' src={'img/' + this.props.image} />
+                </Link>
             </div>
-        );
+        )
     }
 }

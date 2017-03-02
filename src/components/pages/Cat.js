@@ -1,6 +1,7 @@
-import React from "react"
-import NotFound from "./NotFound"
-import CatData from "../../data/cats"
+import React from 'react'
+import NotFound from './NotFound'
+import CatData from '../../data/cats'
+import { Link } from 'react-router'
 
 export default class Cat extends React.Component {
     render() {
@@ -12,17 +13,22 @@ export default class Cat extends React.Component {
         }
 
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <h1>{cat.manufacturer} {cat.name}</h1>
+            <div className='container'>
+                <div>
+                    <Link to="/">
+                        Назад
+                    </Link>
+                </div>
+                <div className='row'>
+                    <div className='col-lg-12'>
+                        <h1>{ cat.breed } { cat.name }</h1>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-6">
-                        <img className="img-responsive" src={"../img/"+cat.image} />
+                <div className='row'>
+                    <div className='col-md-6'>
+                        <img className='img-responsive' src={'../img/'+cat.image} />
                     </div>
-                    <div className="col-md-6">
+                    <div className='col-md-6'>
                         <h3>Description</h3>
                         <ul>
                             <li>Year: {cat.year}</li>
