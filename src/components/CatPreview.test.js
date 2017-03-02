@@ -12,6 +12,6 @@ it( 'CatPreview renders correctly', () => {
 
     const result = renderer.create(
         <CatPreview { ...props } />
-    ).toJSON();
-    expect(result).toMatchSnapshot();
+    ).toJSON()
+    expect(result).toMatchSnapshot()
 } )
